@@ -7,11 +7,9 @@ import java.util.ServiceConfigurationError
 
 
 class Nyxpinter {
-
     fun getInstance(): Nyxpinter {
         return Nyxpinter.SingletonContainer.instance
     }
-
 
     fun bindService(mContext: Context?, callback: ServiceConnection?): Boolean {
         return if (mContext != null && callback != null) {
