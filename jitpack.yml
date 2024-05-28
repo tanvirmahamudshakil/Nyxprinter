@@ -1,0 +1,8 @@
+# configuration file for building snapshots and releases with jitpack.io
+jdk:
+  - openjdk17
+before_install:
+  - ./scripts/prepareJitpackEnvironment.sh
+install:
+  - FILE="-Dfile=nyxprinter.aar"
+  - mvn install:install-file $FILE -DgroupId=com.github.tanvirmahamudshakil -DartifactId=nyxprinter_module -Dversion=2.7 -Dpackaging=aar -DgeneratePom=true
